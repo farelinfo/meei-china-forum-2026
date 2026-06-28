@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <rect width="240" height="60" fill="none"/>
+  <!-- M shape -->
+  <path d="M8 48V12h6l10 20 10-20h6v36h-6V26l-8 16h-4l-8-16v22H8z" fill="#47c34f"/>
+  <!-- E -->
+  <path d="M46 12h18v6H52v8h10v6H52v8h12v6H46V12z" fill="#f4f1e8"/>
+  <!-- E -->
+  <path d="M70 12h18v6H76v8h10v6H76v8h12v6H70V12z" fill="#f4f1e8"/>
+  <!-- I -->
+  <path d="M94 12h6v36h-6V12z" fill="#f4f1e8"/>
+  <!-- divider -->
+  <rect x="108" y="10" width="1" height="40" fill="#2ca640" opacity="0.5"/>
+  <!-- PROGRAM text -->
+  <text x="116" y="28" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#f4f1e8" letter-spacing="2">PROGRAM</text>
+  <!-- tagline -->
+  <text x="116" y="44" font-family="Arial, sans-serif" font-size="7" fill="#aeb9b0" letter-spacing="1.5">BRIDGING THE GAP, CREATING SUCCESS</text>
+</svg>
