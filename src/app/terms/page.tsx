@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import { siteConfig } from "@/data/site-content";
 
 export const metadata: Metadata = {
-  title: `Terms and Conditions — ${siteConfig.siteName}`,
+  title: `Terms and Conditions | ${siteConfig.siteName}`,
 };
 
 export default function TermsPage() {
@@ -13,7 +13,7 @@ export default function TermsPage() {
     <div className="min-h-screen bg-[var(--background)]">
       <header className="border-b border-[var(--border)] bg-[var(--surface)]">
         <div className="mx-auto flex max-w-8xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8 xl:px-12">
-          <Link href="/" aria-label={`${siteConfig.organizer} — return to homepage`}>
+          <Link href="/" aria-label={`${siteConfig.organizer}, return to homepage`}>
             <div className="relative h-9 w-32">
               <Image src="/brand/logo.svg" alt={siteConfig.organizer} fill className="object-contain object-left" />
             </div>

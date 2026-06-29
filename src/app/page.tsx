@@ -2,7 +2,6 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import ValueStrip from "@/components/sections/ValueStrip";
-import HighlightsSection from "@/components/sections/HighlightsSection";
 import OpportunitiesSpotlightSection from "@/components/sections/OpportunitiesSpotlightSection";
 import AboutSection from "@/components/sections/AboutSection";
 import SpeakersSection from "@/components/sections/SpeakersSection";
@@ -11,50 +10,44 @@ import ProgrammeSection from "@/components/sections/ProgrammeSection";
 import CtaSection from "@/components/sections/CtaSection";
 import PartnersSection from "@/components/sections/PartnersSection";
 import FaqSection from "@/components/sections/FaqSection";
-import ContactSection from "@/components/sections/ContactSection";
 
 export default function HomePage() {
   return (
     <>
       <Header />
       <main id="main-content">
-        {/* A — Hero */}
+        {/* A, Hero */}
         <HeroSection />
 
-        {/* B — Countries marquee */}
+        {/* B, Countries marquee */}
         <ValueStrip />
 
-        {/* C — Opportunities spotlight (full-width mint section) */}
-        <HighlightsSection />
-
-        {/* D — Summit agenda + overview panel */}
+        {/* D, Summit agenda + overview panel */}
         <ProgrammeSection />
 
-        {/* C2 — Opportunities spotlight panel (white floating) */}
+        {/* C2, Opportunities card (floats at Programme/About boundary) */}
         <OpportunitiesSpotlightSection />
 
-        {/* G — About (negative top margin pulls it up so the spotlight panel straddles the boundary) */}
-        <div className="-mt-[110px]">
+        {/* G, About (negative margin slides its background behind the card) */}
+        <div className="-mt-[120px]">
           <AboutSection />
         </div>
 
-        {/* I — Speakers */}
+        {/* I, Speakers */}
         <SpeakersSection />
 
-        {/* L — Who should attend */}
+        {/* L, Who should attend */}
         <WhoShouldAttendSection />
 
-        {/* N — Partners */}
+        {/* N, Partners */}
         <PartnersSection />
 
         {/* FAQ */}
         <FaqSection />
 
-        {/* M — CTA */}
+        {/* M, CTA */}
         <CtaSection />
 
-        {/* O — Contact */}
-        <ContactSection />
       </main>
       <Footer />
     </>

@@ -23,7 +23,7 @@ export default function ContactSection() {
               <div className="rounded-sm border border-[var(--border)] bg-[var(--surface)] p-5">
                 <div className="mb-3 flex items-center gap-2">
                   <Mail className="h-4 w-4 text-[var(--green-bright)]" aria-hidden="true" />
-                  <span className="font-heading text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
+                  <span className="font-body text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
                     Email
                   </span>
                 </div>
@@ -39,7 +39,7 @@ export default function ContactSection() {
               <div className="rounded-sm border border-[var(--border)] bg-[var(--surface)] p-5">
                 <div className="mb-3 flex items-center gap-2">
                   <Globe className="h-4 w-4 text-[var(--green-bright)]" aria-hidden="true" />
-                  <span className="font-heading text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
+                  <span className="font-body text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
                     Website
                   </span>
                 </div>
@@ -57,7 +57,7 @@ export default function ContactSection() {
               <div className="rounded-sm border border-[var(--border)] bg-[var(--surface)] p-5 sm:col-span-2">
                 <div className="mb-3 flex items-center gap-2">
                   <Phone className="h-4 w-4 text-[var(--green-bright)]" aria-hidden="true" />
-                  <span className="font-heading text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
+                  <span className="font-body text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
                     Phone
                   </span>
                 </div>
@@ -82,7 +82,7 @@ export default function ContactSection() {
               <div className="rounded-sm border border-[var(--border)] bg-[var(--surface)] p-5 sm:col-span-2">
                 <div className="mb-3 flex items-center gap-2">
                   <MapPin className="h-4 w-4 text-[var(--green-bright)]" aria-hidden="true" />
-                  <span className="font-heading text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
+                  <span className="font-body text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
                     Venue
                   </span>
                 </div>
@@ -101,11 +101,11 @@ export default function ContactSection() {
             <div
               className="mb-4 flex h-32 w-32 items-center justify-center rounded-sm border border-[var(--border)] bg-[var(--background-elevated)]"
               role="img"
-              aria-label="Registration QR code — to be added"
+              aria-label="Registration QR code, to be added"
             >
               <QrCode className="h-12 w-12 text-[var(--text-secondary)]" aria-hidden="true" />
             </div>
-            <p className="text-center font-heading text-xs font-semibold uppercase tracking-wider text-[var(--text-primary)]">
+            <p className="text-center font-body text-xs font-semibold uppercase tracking-wider text-[var(--text-primary)]">
               Registration QR Code
             </p>
             <p className="mt-1 text-center text-[11px] text-[var(--text-secondary)]">

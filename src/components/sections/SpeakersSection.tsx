@@ -7,6 +7,7 @@ import SecondaryButton from "@/components/ui/SecondaryButton";
 import Toast from "@/components/ui/Toast";
 import { speakerPlaceholders } from "@/data/site-content";
 import { User } from "lucide-react";
+import Image from "next/image";
 
 export default function SpeakersSection() {
   const [showToast, setShowToast] = useState(false);
@@ -37,30 +38,38 @@ export default function SpeakersSection() {
               key={speaker.id}
               className="flex flex-col rounded-sm border border-[var(--border)] bg-[var(--surface)] overflow-hidden"
             >
-              {/* Speaker photo placeholder */}
+              {/* Speaker photo */}
               <div
-                className="relative flex items-center justify-center bg-gradient-to-b from-[var(--surface-secondary)] to-[var(--background-elevated)]"
+                className="relative bg-gradient-to-b from-[var(--surface-secondary)] to-[var(--background-elevated)]"
                 style={{ aspectRatio: "3/4", maxHeight: "280px" }}
-                role="img"
-                aria-label="Speaker portrait — to be announced"
               >
-                <div className="flex flex-col items-center gap-3 p-8 text-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)]">
-                    <User className="h-8 w-8 text-[var(--text-secondary)]" aria-hidden="true" />
+                {speaker.image ? (
+                  <Image
+                    src={speaker.image}
+                    alt={speaker.name ?? "Speaker"}
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-3 p-8 text-center">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--surface)]">
+                      <User className="h-8 w-8 text-[var(--text-secondary)]" aria-hidden="true" />
+                    </div>
+                    <span className="inline-block rounded-full border border-[var(--green-dark)] bg-[var(--green-dark)]/30 px-3 py-1 font-body text-[10px] font-semibold uppercase tracking-wider text-[var(--green-bright)]">
+                      Coming Soon
+                    </span>
                   </div>
-                  <span className="inline-block rounded-full border border-[var(--green-dark)] bg-[var(--green-dark)]/30 px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-wider text-[var(--green-bright)]">
-                    Coming Soon
-                  </span>
-                </div>
+                )}
               </div>
 
               {/* Speaker info */}
               <div className="border-t border-[var(--border)] p-4">
-                <p className="font-heading text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
-                  Speaker to be announced
+                <p className="font-body text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
+                  {speaker.name ?? "Speaker to be announced"}
                 </p>
                 <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                  Official profile coming soon
+                  {speaker.role ?? (speaker.organization ?? "Official profile coming soon")}
                 </p>
               </div>
             </article>

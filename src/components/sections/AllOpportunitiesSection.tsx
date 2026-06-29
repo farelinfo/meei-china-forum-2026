@@ -55,7 +55,7 @@ export default function AllOpportunitiesSection() {
                     aria-hidden="true"
                   />
                 </div>
-                <h3 className="mb-2 font-heading text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
+                <h3 className="mb-2 font-body text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
                   {highlight.title}
                 </h3>
                 <p className="flex-1 text-xs leading-relaxed text-[var(--text-secondary)]">

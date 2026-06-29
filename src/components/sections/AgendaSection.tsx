@@ -38,10 +38,10 @@ export default function AgendaSection() {
                 : "border-[var(--border)] bg-[var(--surface)] text-[var(--text-secondary)] hover:border-[var(--green-dark)] hover:text-[var(--text-primary)]"
             }`}
           >
-            <span className="block font-heading text-[10px] font-semibold uppercase tracking-wider text-[var(--green-bright)]">
+            <span className="block font-body text-[10px] font-semibold uppercase tracking-wider text-[var(--green-bright)]">
               {d.date}
             </span>
-            <span className="block font-heading text-xs font-semibold uppercase tracking-wide">
+            <span className="block font-body text-xs font-semibold uppercase tracking-wide">
               {d.label}
             </span>
           </button>
@@ -55,7 +55,7 @@ export default function AgendaSection() {
         aria-labelledby={`tab-${day.id}`}
       >
         <div className="mb-4 inline-flex items-center gap-2 rounded-sm border border-[var(--green-dark)] bg-[var(--green-dark)]/20 px-3 py-1">
-          <span className="font-heading text-[10px] font-semibold uppercase tracking-wider text-[var(--green-bright)]">
+          <span className="font-body text-[10px] font-semibold uppercase tracking-wider text-[var(--green-bright)]">
             {day.theme}
           </span>
         </div>
@@ -72,14 +72,14 @@ export default function AgendaSection() {
               {/* Time */}
               <div className="flex w-16 shrink-0 items-start gap-1.5 pt-0.5">
                 <Clock className="h-3 w-3 shrink-0 text-[var(--green-bright)] mt-0.5" aria-hidden="true" />
-                <span className="font-heading text-[11px] font-semibold tabular-nums text-[var(--green-bright)]">
+                <span className="font-body text-[11px] font-semibold tabular-nums text-[var(--green-bright)]">
                   {session.time}
                 </span>
               </div>
 
               {/* Content */}
               <div className="flex-1">
-                <p className="mb-1 font-heading text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
+                <p className="mb-1 font-body text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
                   {session.title}
                 </p>
                 <p className="text-xs leading-relaxed text-[var(--text-secondary)]">

@@ -13,10 +13,10 @@ export default function ImpactStrip() {
               key={index}
               className="flex flex-col items-center justify-center px-6 py-10 text-center"
             >
-              <span className="font-heading text-4xl font-bold uppercase tracking-tight text-[var(--green-bright)] sm:text-5xl">
+              <span className="font-body text-4xl font-bold uppercase tracking-tight text-[var(--green-bright)] sm:text-5xl">
                 {fact.value}
               </span>
-              <span className="mt-1 font-heading text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text-primary)]">
+              <span className="mt-1 font-body text-xs font-semibold uppercase tracking-[0.15em] text-[var(--text-primary)]">
                 {fact.label}
               </span>
               <span className="mt-1 text-xs text-[var(--text-secondary)]">

@@ -1,18 +1,12 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import {
-  TrendingUp, Factory, Globe, Users,
-  MessageSquare, Building2, MapPin,
-  ArrowLeft, ArrowRight, Check, Users2,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Users2 } from "lucide-react";
 import { summitHighlights, siteConfig } from "@/data/site-content";
 
-const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
-  TrendingUp, Factory, Globe,
-  Handshake: Users,
-  MessageSquare, Building2, MapPin,
-};
+// iOS line icons from Icons8, filtered white on dark, green on hover
+const TO_GREEN =
+  "brightness(0) saturate(100%) invert(62%) sepia(50%) saturate(450%) hue-rotate(82deg) brightness(100%) contrast(90%)";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -27,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const opportunity = summitHighlights.find((h) => h.id === id);
   if (!opportunity) return {};
   return {
-    title: `${opportunity.title} — ${siteConfig.eventName}`,
+    title: `${opportunity.title} | ${siteConfig.eventName}`,
     description: opportunity.tagline ?? opportunity.description,
   };
 }
@@ -37,7 +31,6 @@ export default async function OpportunityDetailPage({ params }: Props) {
   const opportunity = summitHighlights.find((h) => h.id === id);
   if (!opportunity) notFound();
 
-  const Icon = iconMap[opportunity.icon] ?? Globe;
   const index = summitHighlights.findIndex((h) => h.id === id);
   const prev = summitHighlights[index - 1] ?? null;
   const next = summitHighlights[index + 1] ?? null;
@@ -65,21 +58,47 @@ export default async function OpportunityDetailPage({ params }: Props) {
       </header>
 
       <main>
-        {/* ── Hero / Header ── */}
+        {/* ── Hero with photo ── */}
         <section
-          className="relative overflow-hidden py-20 lg:py-28"
-          style={{ background: "#0B1710" }}
+          className="relative overflow-hidden"
           aria-labelledby="opportunity-heading"
+          style={{ minHeight: "420px" }}
         >
-          {/* Subtle background grid */}
-          <div className="absolute inset-0 opacity-[0.04]" aria-hidden="true"
-            style={{
-              backgroundImage:
-                "linear-gradient(rgba(71,195,79,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(71,195,79,0.5) 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
-          <div className="relative mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 xl:px-12">
+          {/* Background photo */}
+          {opportunity.heroImage && (
+            <div className="absolute inset-0 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={opportunity.heroImage}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover object-center"
+              />
+              {/* Dark overlay */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "linear-gradient(to right, rgba(5,8,6,0.90) 0%, rgba(5,8,6,0.75) 50%, rgba(5,8,6,0.55) 100%)",
+                }}
+              />
+            </div>
+          )}
+
+          {/* Fallback: grid pattern when no image */}
+          {!opportunity.heroImage && (
+            <div
+              className="absolute inset-0 opacity-[0.04]"
+              aria-hidden="true"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(71,195,79,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(71,195,79,0.5) 1px, transparent 1px)",
+                backgroundSize: "40px 40px",
+                background: "#0B1710",
+              }}
+            />
+          )}
+
+          <div className="relative z-10 mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28 xl:px-12">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="mb-10">
               <ol className="flex items-center gap-2 text-xs text-[#9DA89F]" role="list">
@@ -96,10 +115,22 @@ export default async function OpportunityDetailPage({ params }: Props) {
                 {/* Icon */}
                 <div
                   className="mb-7 flex h-16 w-16 items-center justify-center rounded-2xl"
-                  style={{ background: "rgba(44,166,64,0.14)", border: "1px solid rgba(71,195,79,0.25)" }}
+                  style={{
+                    background: "rgba(44,166,64,0.20)",
+                    border: "1px solid rgba(71,195,79,0.30)",
+                    backdropFilter: "blur(8px)",
+                  }}
                   aria-hidden="true"
                 >
-                  <Icon className="h-7 w-7" style={{ color: "#47c34f" }} strokeWidth={1.6} />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`https://img.icons8.com/ios/64/${opportunity.icon}.png`}
+                    alt=""
+                    width={30}
+                    height={30}
+                    className="h-[30px] w-[30px] object-contain"
+                    style={{ filter: TO_GREEN }}
+                  />
                 </div>
 
                 {opportunity.tagline && (
@@ -117,7 +148,7 @@ export default async function OpportunityDetailPage({ params }: Props) {
               </div>
 
               <div className="lg:col-span-4">
-                <p className="font-body text-base leading-relaxed text-[#9DA89F]">
+                <p className="font-body text-base leading-relaxed text-white/70">
                   {opportunity.description}
                 </p>
               </div>
@@ -131,7 +162,7 @@ export default async function OpportunityDetailPage({ params }: Props) {
             <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 xl:px-12">
               <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
 
-                {/* Left: body paragraphs */}
+                {/* Left: body paragraphs + benefits */}
                 <div className="lg:col-span-7">
                   {opportunity.body && opportunity.body.length > 0 && (
                     <div className="mb-12 flex flex-col gap-5">
@@ -143,7 +174,6 @@ export default async function OpportunityDetailPage({ params }: Props) {
                     </div>
                   )}
 
-                  {/* Key Benefits */}
                   {opportunity.keyBenefits && opportunity.keyBenefits.length > 0 && (
                     <div>
                       <h2 className="mb-6 font-heading text-xl font-bold text-[#F4F4EF]">
@@ -169,9 +199,8 @@ export default async function OpportunityDetailPage({ params }: Props) {
                   )}
                 </div>
 
-                {/* Right: Who For + CTA panel */}
+                {/* Right: Who For + CTA */}
                 <div className="flex flex-col gap-6 lg:col-span-5">
-                  {/* Who should attend */}
                   {opportunity.whoFor && opportunity.whoFor.length > 0 && (
                     <div
                       className="rounded-2xl p-8"
@@ -223,9 +252,7 @@ export default async function OpportunityDetailPage({ params }: Props) {
                     <Link
                       href="/register"
                       className="flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400"
-                      style={{
-                        background: "linear-gradient(135deg, #078442 0%, #00A85A 100%)",
-                      }}
+                      style={{ background: "linear-gradient(135deg, #078442 0%, #00A85A 100%)" }}
                     >
                       Register Now
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -238,7 +265,10 @@ export default async function OpportunityDetailPage({ params }: Props) {
         )}
 
         {/* ── Prev / Next navigation ── */}
-        <section className="border-t border-white/8 py-12">
+        <section
+          className="border-t py-12"
+          style={{ borderColor: "rgba(255,255,255,0.08)" }}
+        >
           <div className="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 xl:px-12">
             <div className="flex items-center justify-between gap-6">
               {prev ? (

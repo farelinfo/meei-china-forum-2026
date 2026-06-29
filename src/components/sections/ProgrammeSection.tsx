@@ -58,7 +58,7 @@ export default function ProgrammeSection() {
               {/* Main heading */}
               <h2
                 id="programme-heading"
-                className="mb-5 font-heading font-semibold leading-[1.05] text-[#F4F4EF]"
+                className="mb-5 font-body font-semibold leading-[1.05] text-[#F4F4EF]"
                 style={{
                   fontSize: "clamp(3rem, 5vw, 4.25rem)",
                   letterSpacing: "-0.03em",
@@ -219,7 +219,7 @@ export default function ProgrammeSection() {
                       </div>
                     </div>
 
-                    {/* Row separator — offset past node + gap + time + gap */}
+                    {/* Row separator, offset past node + gap + time + gap */}
                     {i < day.sessions.length - 1 && (
                       <div
                         className="ml-[132px]"
@@ -249,7 +249,7 @@ export default function ProgrammeSection() {
               Why Attend
             </p>
             <h3
-              className="mb-7 font-heading font-bold leading-snug"
+              className="mb-7 font-body font-bold leading-snug"
               style={{ fontSize: "clamp(1.1rem, 1.8vw, 1.4rem)", color: "#1C2E20" }}
             >
               Why You Should Be Part of{" "}
@@ -295,7 +295,7 @@ export default function ProgrammeSection() {
               Venue
             </p>
 
-            <p className="mb-1 font-heading text-sm font-bold" style={{ color: "#1C2E20" }}>
+            <p className="mb-1 font-body text-sm font-bold" style={{ color: "#1C2E20" }}>
               {siteConfig.venue}
             </p>
             <p

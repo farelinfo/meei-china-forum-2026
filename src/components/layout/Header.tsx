@@ -48,21 +48,17 @@ export default function Header() {
           {/* ── Brand / Logo ── */}
           <Link
             href="/"
-            className="flex shrink-0 items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 focus-visible:rounded-xl"
-            aria-label={`${siteConfig.siteName} — go to homepage`}
+            className="flex shrink-0 items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 focus-visible:rounded"
+            aria-label={`${siteConfig.siteName}, go to homepage`}
           >
-            {/* Frosted-glass card: bg-white/90 + mix-blend-multiply removes white PNG bg */}
-            <div className="overflow-hidden rounded-xl border border-white/30 bg-white/90 px-2 py-1 shadow-md backdrop-blur-sm md:px-2.5 md:py-1.5">
-              <div className="relative h-7 w-28 md:h-8 md:w-32">
-                <Image
-                  src="/brand/logo.png"
-                  alt="MEEI Program — Bridging the Gap, Creating Success"
-                  fill
-                  className="object-contain object-left mix-blend-multiply"
-                  priority
-                />
-              </div>
-            </div>
+            <Image
+              src="/images/meei-logo-transparent.png"
+              alt="MEEI Program, Bridging the Gap, Creating Success"
+              width={200}
+              height={98}
+              className="h-10 w-auto object-contain md:h-12"
+              priority
+            />
           </Link>
 
           {/* ── Desktop centred nav pill (visible ≥ 768 px) ── */}
@@ -93,7 +89,7 @@ export default function Header() {
 
           {/* ── Right: Register button (desktop) + Hamburger (mobile) ── */}
           <div className="flex items-center gap-3">
-            {/* Register Now — desktop */}
+            {/* Register Now, desktop */}
             <Link
               href="/register"
               className="hidden items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-[#063F32] shadow-md transition-all duration-200 hover:bg-white/90 hover:shadow-lg active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-400 md:inline-flex lg:gap-2 lg:px-5 lg:py-2 lg:text-sm"
@@ -102,7 +98,7 @@ export default function Header() {
               <ArrowRight className="h-3 w-3 lg:h-3.5 lg:w-3.5" aria-hidden="true" />
             </Link>
 
-            {/* Hamburger — mobile only (< 768 px) */}
+            {/* Hamburger, mobile only (< 768 px) */}
             <button
               type="button"
               onClick={() => setIsMobileOpen((v) => !v)}

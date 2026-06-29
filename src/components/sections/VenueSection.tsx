@@ -32,7 +32,7 @@ export default function VenueSection() {
       />
 
       <div className="flex items-center justify-between">
-        <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--background-elevated)] px-3 py-1 font-heading text-[10px] font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
+        <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--background-elevated)] px-3 py-1 font-body text-[10px] font-semibold uppercase tracking-wider text-[var(--text-secondary)]">
           <MapPin className="h-3 w-3" aria-hidden="true" />
           Guangzhou, China
         </span>
@@ -40,7 +40,7 @@ export default function VenueSection() {
           href={mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-sm border border-[var(--border)] px-3 py-2 font-heading text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)] transition-colors hover:border-[var(--green-bright)] hover:text-[var(--green-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)]"
+          className="inline-flex items-center gap-1.5 rounded-sm border border-[var(--border)] px-3 py-2 font-body text-xs font-semibold uppercase tracking-wider text-[var(--text-secondary)] transition-colors hover:border-[var(--green-bright)] hover:text-[var(--green-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)]"
           aria-label="View venue on Google Maps (opens in new tab)"
         >
           View on Map

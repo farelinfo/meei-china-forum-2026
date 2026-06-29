@@ -43,8 +43,8 @@ export default function AboutSection() {
                 The China–Africa Business &amp; Investment Summit 2026 is designed
                 to bring together stakeholders engaged in strengthening Africa–China
                 trade, investment, manufacturing, industrial cooperation, and
-                sustainable economic partnerships. Hosted in Guangzhou — one of
-                China&apos;s leading commercial and industrial hubs — the summit
+                sustainable economic partnerships. Hosted in Guangzhou, one of
+                China&apos;s leading commercial and industrial hubs, the summit
                 offers a focused environment for meaningful dialogue and business
                 development.
               </p>
@@ -74,7 +74,7 @@ export default function AboutSection() {
             <div className="mt-8">
               <Link
                 href="/#highlights"
-                className="inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-heading text-sm font-semibold uppercase tracking-widest transition-all duration-200 hover:border-[var(--green-bright)] hover:text-[var(--green-bright)] active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)]"
+                className="inline-flex items-center gap-2 rounded-sm border px-6 py-3 font-body text-sm font-semibold uppercase tracking-widest transition-all duration-200 hover:border-[var(--green-bright)] hover:text-[var(--green-bright)] active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)]"
                 style={{ borderColor: "rgba(28,46,32,0.28)", color: HEADING_COLOR }}
               >
                 Explore the Summit
@@ -87,7 +87,7 @@ export default function AboutSection() {
             <VideoPlaceholder
               videoUrl={mediaConfig.aboutVideoUrl}
               posterUrl={mediaConfig.aboutPoster}
-              title="Summit experience — conference photography or event video"
+              title="Summit experience, conference photography or event video"
               label="Summit experience video or conference photography"
             />
           </div>

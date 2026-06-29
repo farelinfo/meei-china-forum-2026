@@ -8,7 +8,7 @@ import { siteConfig, contactDetails, ticketPackages } from "@/data/site-content"
 import { Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: `Register — ${siteConfig.metaTitle}`,
+  title: `Register | ${siteConfig.metaTitle}`,
   description: `Register your interest for the ${siteConfig.eventName}, ${siteConfig.dates}, ${siteConfig.venue}, Guangzhou, China.`,
 };
 
@@ -20,7 +20,7 @@ export default function RegisterPage() {
         <div className="mx-auto flex max-w-8xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8 xl:px-12">
           <Link
             href="/"
-            aria-label={`${siteConfig.organizer} — return to homepage`}
+            aria-label={`${siteConfig.organizer}, return to homepage`}
             className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-[var(--green-bright)] focus-visible:rounded"
           >
             <div className="relative h-9 w-32">
@@ -76,7 +76,7 @@ export default function RegisterPage() {
         {/* Main content grid */}
         <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 lg:px-8 xl:px-12">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
-            {/* Form — left 8 columns */}
+            {/* Form, left 8 columns */}
             <div className="lg:col-span-8">
               <div className="rounded-sm border border-[var(--border)] bg-[var(--surface)] p-6 sm:p-8">
                 <h2 className="mb-6 font-heading text-lg font-semibold uppercase tracking-wide text-[var(--text-primary)]">
@@ -92,7 +92,7 @@ export default function RegisterPage() {
               </div>
             </div>
 
-            {/* Right sidebar — 4 columns */}
+            {/* Right sidebar, 4 columns */}
             <aside className="flex flex-col gap-6 lg:col-span-4">
               {/* Package summary */}
               <div className="rounded-sm border border-[var(--border)] bg-[var(--surface)] p-5">

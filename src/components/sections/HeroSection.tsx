@@ -28,13 +28,13 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative min-h-screen w-full overflow-hidden bg-[#041A0F]"
-      aria-label="MEEI China Business Forum 2025 — hero"
+      aria-label="MEEI China Business Forum 2025, hero"
     >
       {/* ── Full-bleed background: Dr Daniel ── */}
       <div className="absolute inset-0">
         <Image
           src="/images/Dr%20Daniel.png"
-          alt="Dr Daniel — Keynote Speaker, MEEI China Business Forum 2025"
+          alt="Dr Daniel, Keynote Speaker, MEEI China Business Forum 2025"
           fill
           className="object-cover"
           style={{ objectPosition: "35% center" }}
@@ -49,7 +49,7 @@ export default function HeroSection() {
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(to right, rgba(4,26,15,0.08) 0%, rgba(4,26,15,0.30) 28%, rgba(4,26,15,0.78) 48%, rgba(4,26,15,0.95) 62%, rgba(4,26,15,0.98) 100%)",
+            "linear-gradient(to right, rgba(4,26,15,0) 0%, rgba(4,26,15,0) 32%, rgba(4,26,15,0.70) 50%, rgba(4,26,15,0.93) 62%, rgba(4,26,15,0.97) 100%)",
         }}
       />
 
@@ -65,7 +65,7 @@ export default function HeroSection() {
         aria-hidden="true"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(4,26,15,0.4) 0%, transparent 18%, transparent 80%, rgba(4,26,15,0.5) 100%)",
+            "linear-gradient(to bottom, rgba(4,26,15,0.15) 0%, transparent 18%, transparent 80%, rgba(4,26,15,0.4) 100%)",
         }}
       />
 

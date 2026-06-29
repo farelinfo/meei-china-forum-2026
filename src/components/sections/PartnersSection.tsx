@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 // Partner logos will be replaced with confirmed partner assets when announced by MEEI Program.
 // These placeholder names represent the categories of expected supporting organizations.
 const PLACEHOLDER_ORGS = [
@@ -36,7 +38,7 @@ export default function PartnersSection() {
         </p>
         <p
           id="partners-heading"
-          className="font-heading text-2xl font-bold leading-snug md:text-3xl"
+          className="font-body text-2xl font-bold leading-snug md:text-3xl"
           style={{ color: "#071B13" }}
         >
           Built through partnerships.
@@ -51,7 +53,7 @@ export default function PartnersSection() {
         <div className="h-px" style={{ background: "rgba(7,27,19,0.08)" }} />
       </div>
 
-      {/* ── Scrolling marquee — full viewport width ── */}
+      {/* ── Scrolling marquee, full viewport width ── */}
       <div
         className="relative overflow-hidden"
         aria-label="Supporting organizations"
@@ -103,6 +105,21 @@ export default function PartnersSection() {
         Partner and supporting organization logos will be announced by MEEI
         Program.
       </p>
+
+      {/* ── Subtle CTA ── */}
+      <div className="mt-6 flex justify-center">
+        <Link
+          href="/#contact"
+          className="group inline-flex items-center gap-1.5 font-body text-sm font-semibold transition-colors duration-200 hover:opacity-80"
+          style={{ color: "#2ca640" }}
+        >
+          Interested in partnering?
+          <span className="underline underline-offset-4 transition-transform duration-200 group-hover:translate-x-0.5">
+            Contact us
+          </span>
+          <svg className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </Link>
+      </div>
     </section>
   );
 }

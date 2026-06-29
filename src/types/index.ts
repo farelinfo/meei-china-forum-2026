@@ -7,6 +7,7 @@ export interface NavItem {
 export interface SummitHighlight {
   id: string;
   icon: string;
+  heroImage?: string;
   title: string;
   description: string;
   tagline?: string;

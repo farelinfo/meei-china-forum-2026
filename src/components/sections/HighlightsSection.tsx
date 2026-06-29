@@ -54,7 +54,7 @@ export default function HighlightsSection() {
             </div>
             <h2
               id="highlights-heading"
-              className="font-heading font-bold leading-[1.08]"
+              className="font-body font-bold leading-[1.08]"
               style={{
                 color: "#003F35",
                 fontSize: "clamp(1.9rem, 4vw, 3.5rem)",
@@ -101,7 +101,7 @@ export default function HighlightsSection() {
 
               {/* Title */}
               <h3
-                className="mb-3 font-heading text-xl font-bold leading-snug"
+                className="mb-3 font-body text-xl font-bold leading-snug"
                 style={{ color: "#003F35" }}
               >
                 {title}

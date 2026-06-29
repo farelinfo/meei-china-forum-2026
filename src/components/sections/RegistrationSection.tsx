@@ -32,19 +32,19 @@ export default function RegistrationSection() {
             {pkg.badge && (
               <div className="absolute -top-2.5 right-4 flex items-center gap-1 rounded-full border border-[var(--gold)] bg-[var(--background)] px-2.5 py-0.5">
                 <Star className="h-2.5 w-2.5 text-[var(--gold)]" aria-hidden="true" />
-                <span className="font-heading text-[9px] font-bold uppercase tracking-wider text-[var(--gold)]">
+                <span className="font-body text-[9px] font-bold uppercase tracking-wider text-[var(--gold)]">
                   {pkg.badge}
                 </span>
               </div>
             )}
 
             <div className="mb-2 flex items-start justify-between gap-2">
-              <h3 className="font-heading text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
+              <h3 className="font-body text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
                 {pkg.name}
               </h3>
             </div>
 
-            <p className="mb-1 font-heading text-xs font-medium text-[var(--gold)]">
+            <p className="mb-1 font-body text-xs font-medium text-[var(--gold)]">
               {pkg.priceLabel}
             </p>
             <p className="mb-3 text-xs leading-relaxed text-[var(--text-secondary)]">
@@ -65,7 +65,7 @@ export default function RegistrationSection() {
 
             <Link
               href={`/register?pass=${pkg.passSlug}`}
-              className={`block w-full rounded-sm px-4 py-2.5 text-center font-heading text-xs font-semibold uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)] ${
+              className={`block w-full rounded-sm px-4 py-2.5 text-center font-body text-xs font-semibold uppercase tracking-wider transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)] ${
                 pkg.highlighted
                   ? "bg-[var(--green-primary)] text-white hover:bg-[var(--green-dark)]"
                   : "border border-[var(--border)] text-[var(--text-primary)] hover:border-[var(--green-bright)] hover:text-[var(--green-bright)]"

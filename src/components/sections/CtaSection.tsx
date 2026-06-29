@@ -32,12 +32,12 @@ export default function CtaSection() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-8xl px-4 text-center sm:px-6 lg:px-8 xl:px-12">
-        <p className="mb-4 font-heading text-xs font-semibold uppercase tracking-[0.2em] text-[var(--green-bright)]">
+        <p className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.2em] text-[var(--green-bright)]">
           Guangzhou · October 2026
         </p>
         <h2
           id="cta-heading"
-          className="section-heading mx-auto mb-6 max-w-3xl font-heading font-bold uppercase tracking-tight text-[var(--text-primary)]"
+          className="section-heading mx-auto mb-6 max-w-3xl font-body font-bold uppercase tracking-tight text-[var(--text-primary)]"
         >
           Build the Partnerships That{" "}
           <span className="text-[var(--gold)]">Shape Tomorrow</span>

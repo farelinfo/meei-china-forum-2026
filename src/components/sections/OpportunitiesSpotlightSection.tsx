@@ -1,14 +1,28 @@
 import Link from "next/link";
-import { TrendingUp, Factory, Globe, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { summitHighlights } from "@/data/site-content";
 
 const FEATURED_IDS = ["investment", "manufacturing", "trade"];
 
-const iconMap: Record<string, React.ComponentType<{ className?: string; strokeWidth?: number }>> = {
-  TrendingUp,
-  Factory,
-  Globe,
+interface CardMeta {
+  iconSlug: string;
+  label: string;
+  num: string;
+}
+
+const CARD_META: Record<string, CardMeta> = {
+  investment:    { iconSlug: "money-bag",  label: "Investment",     num: "01" },
+  manufacturing: { iconSlug: "factory",    label: "Manufacturing",  num: "02" },
+  trade:         { iconSlug: "cargo-ship", label: "Trade & Export", num: "03" },
 };
+
+/* CSS filter: black iOS PNG → #2ca640 brand green */
+const TO_GREEN =
+  "brightness(0) saturate(100%) invert(44%) sepia(35%) saturate(1000%) hue-rotate(95deg) brightness(97%) contrast(107%)";
+
+function icons8(slug: string, size = 96) {
+  return `https://img.icons8.com/ios/${size}/${slug}.png`;
+}
 
 const featured = summitHighlights.filter((h) => FEATURED_IDS.includes(h.id));
 
@@ -16,82 +30,138 @@ export default function OpportunitiesSpotlightSection() {
   return (
     <section
       id="all-opportunities"
-      className="relative z-10 -mt-[110px] px-4 sm:px-6 lg:px-8 xl:px-12"
+      className="relative z-10 -mt-[140px] px-5 sm:px-8 lg:px-16 xl:px-20"
       aria-labelledby="spotlight-heading"
     >
       <div className="mx-auto max-w-8xl">
+        {/* ── Light green card ── */}
         <div
-          className="rounded-2xl px-8 py-7 lg:px-12"
+          className="relative overflow-hidden rounded-[28px] px-8 py-14 lg:px-12 lg:py-16"
           style={{
-            background: "#EAF3FB",
-            boxShadow: "0 8px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08)",
+            background: "#E8F4EC",
+            boxShadow: "0 24px 80px rgba(0,0,0,0.22), 0 4px 24px rgba(0,0,0,0.10)",
           }}
         >
-          {/* ── Single-row header ── */}
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
-            <div>
-              <p className="mb-1 font-body text-[9px] font-semibold uppercase tracking-[0.28em] text-[#2ca640]">
-                Summit Opportunities
-              </p>
-              <h2
-                id="spotlight-heading"
-                className="font-heading font-bold leading-tight text-[#0B1A10]"
-                style={{ fontSize: "clamp(1.1rem, 2vw, 1.45rem)" }}
-              >
-                Explore Opportunities That Move Business Forward
-              </h2>
-            </div>
-            <Link
-              href="/opportunities"
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-full border-2 border-[#2ca640] px-5 py-2 text-xs font-semibold text-[#2ca640] transition-all duration-200 hover:bg-[#2ca640] hover:text-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2ca640]"
-            >
-              View All
-              <ArrowRight className="h-3.5 w-3.5" aria-hidden="true" />
-            </Link>
-          </div>
+          {/* Decorative radial */}
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -left-40 -top-40 hidden h-[500px] w-[500px] rounded-full opacity-40 lg:block"
+            style={{
+              background: "radial-gradient(circle at center, #b8dfc2 0%, transparent 68%)",
+            }}
+          />
 
-          {/* ── Divider ── */}
-          <div className="mb-5 h-px bg-[#E8F0EA]" aria-hidden="true" />
+          <div className="relative z-10">
+            {/* ── Header ── */}
+            <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
 
-          {/* ── Three featured opportunities ── */}
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-3 sm:divide-x sm:divide-[#E8F0EA] sm:gap-0">
-            {featured.map(({ id, icon, title, description }, i) => {
-              const Icon = iconMap[icon] ?? Globe;
-              return (
-                <Link
-                  key={id}
-                  href={`/opportunities/${id}`}
-                  className="group flex items-start gap-4 transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2ca640] focus-visible:rounded-lg sm:px-8 first:sm:pl-0 last:sm:pr-0"
-                >
-                  {/* Icon */}
+              <div className="max-w-[750px]">
+                {/* Eyebrow */}
+                <div className="mb-4 flex items-center gap-2.5">
                   <div
-                    className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg transition-colors duration-200 group-hover:bg-[#2ca640]"
-                    style={{ background: "#EEF8F3" }}
+                    className="h-0.5 w-5 rounded-full"
+                    style={{ background: "#2ca640" }}
                     aria-hidden="true"
-                  >
-                    <Icon
-                      className="h-4 w-4 transition-colors duration-200 group-hover:text-white"
-                      style={{ color: "#2ca640" }}
-                      strokeWidth={1.75}
-                    />
-                  </div>
+                  />
+                  <p className="font-body text-[12px] font-semibold uppercase tracking-[0.22em] text-[#2ca640]">
+                    Summit Opportunities
+                  </p>
+                </div>
 
-                  {/* Text */}
-                  <div className="min-w-0">
-                    <h3 className="mb-1 font-heading text-sm font-bold text-[#0B1A10]">
+                <h2
+                  id="spotlight-heading"
+                  className="mb-4 font-body font-bold leading-[1.08] text-[#10231B]"
+                  style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}
+                >
+                  Explore Opportunities That Move Business Forward
+                </h2>
+
+                <p
+                  className="max-w-[600px] font-body leading-[1.62] text-[#3D6049]"
+                  style={{ fontSize: "clamp(0.95rem, 1.1vw, 1.0625rem)" }}
+                >
+                  Discover high-value pathways for investment, production, trade,
+                  and cross-border collaboration.
+                </p>
+              </div>
+
+              {/* View All button */}
+              <div className="shrink-0">
+                <Link
+                  href="/opportunities"
+                  className="group inline-flex items-center gap-2 rounded-full border border-[#2ca640] px-6 py-3 font-body text-sm font-semibold text-[#10231B] transition-all duration-200 hover:bg-[#2ca640] hover:text-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2ca640]"
+                >
+                  View All
+                  <ArrowRight
+                    className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                    aria-hidden="true"
+                  />
+                </Link>
+              </div>
+            </div>
+
+            {/* ── Cards ── */}
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {featured.map(({ id, title, description }) => {
+                const meta = CARD_META[id];
+                if (!meta) return null;
+                const { iconSlug, label, num } = meta;
+
+                return (
+                  <Link
+                    key={id}
+                    href={`/opportunities/${id}`}
+                    className="group flex min-h-[280px] flex-col rounded-[18px] border border-[#C8DECD] bg-white p-7 shadow-[0_8px_24px_rgba(20,50,35,0.06)] transition-all duration-200 hover:-translate-y-1 hover:border-[#8fc49a] hover:shadow-[0_16px_40px_rgba(20,50,35,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2ca640]"
+                  >
+                    {/* iOS line icon */}
+                    <div
+                      className="mb-5 flex items-center justify-center rounded-2xl"
+                      style={{ background: "#EAF6ED", width: "52px", height: "52px" }}
+                      aria-hidden="true"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={icons8(iconSlug, 96)}
+                        alt=""
+                        width={26}
+                        height={26}
+                        className="h-[26px] w-[26px] object-contain"
+                        style={{ filter: TO_GREEN }}
+                      />
+                    </div>
+
+                    {/* Category label */}
+                    <p className="mb-2.5 font-body text-[11px] font-semibold uppercase tracking-[0.12em] text-[#6B8C7A]">
+                      {num} · {label}
+                    </p>
+
+                    {/* Title */}
+                    <h3
+                      className="mb-2.5 font-body font-bold leading-snug text-[#10231B]"
+                      style={{ fontSize: "clamp(1.1rem, 1.4vw, 1.3rem)" }}
+                    >
                       {title}
                     </h3>
-                    <p className="mb-2 font-body text-xs leading-relaxed text-[#637A73]">
+
+                    {/* Description */}
+                    <p className="flex-1 font-body text-[14.5px] leading-[1.65] text-[#4A6358]">
                       {description}
                     </p>
-                    <span className="inline-flex items-center gap-1 text-xs font-semibold text-[#2ca640] transition-all duration-200 group-hover:gap-1.5">
-                      Learn more
-                      <ArrowRight className="h-3 w-3 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true" />
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
+
+                    {/* Bottom link */}
+                    <div className="mt-6 flex items-center gap-1.5">
+                      <span className="font-body text-sm font-semibold text-[#2ca640] underline-offset-4 group-hover:underline">
+                        Explore opportunity
+                      </span>
+                      <ArrowRight
+                        className="h-4 w-4 text-[#2ca640] transition-transform duration-200 group-hover:translate-x-1"
+                        aria-hidden="true"
+                      />
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

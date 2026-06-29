@@ -19,7 +19,7 @@ export default function SectionHeading({
     <Tag
       id={id}
       style={style}
-      className={`section-heading font-heading font-semibold uppercase tracking-tight text-[var(--text-primary)] ${className}`}
+      className={`section-heading font-body font-semibold uppercase tracking-tight text-[var(--text-primary)] ${className}`}
     >
       {children}
     </Tag>

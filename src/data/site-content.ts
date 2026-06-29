@@ -55,13 +55,14 @@ export const navigationItems: NavItem[] = [
 export const summitHighlights: SummitHighlight[] = [
   {
     id: "investment",
-    icon: "TrendingUp",
+    icon: "investment",
+    heroImage: "/images/CRO00278.jpg",
     title: "Investment Opportunities",
     description:
       "Explore potential investment sectors, emerging markets, and cross-border business opportunities.",
     tagline: "Discover Africa's fastest-growing investment frontiers",
     body: [
-      "Africa represents one of the world's most dynamic investment frontiers, with rapidly growing economies, a young and expanding middle class, and untapped resource and infrastructure potential. MEEI 2026 connects capital with opportunity — directly and efficiently.",
+      "Africa represents one of the world's most dynamic investment frontiers, with rapidly growing economies, a young and expanding middle class, and untapped resource and infrastructure potential. MEEI 2026 connects capital with opportunity, directly and efficiently.",
       "Delegates will engage in curated investment presentations, sector-specific panels, and one-on-one meetings with government and private sector representatives from across the continent. Whether your focus is infrastructure, energy, agribusiness, technology, or consumer markets, the summit provides a structured environment to explore real investment opportunities.",
     ],
     keyBenefits: [
@@ -79,7 +80,8 @@ export const summitHighlights: SummitHighlight[] = [
   },
   {
     id: "manufacturing",
-    icon: "Factory",
+    icon: "manufacturing",
+    heroImage: "/images/DSC_1067.JPG",
     title: "Manufacturing Partnerships",
     description:
       "Connect with manufacturers, industrial operators, suppliers, and potential production partners.",
@@ -103,13 +105,14 @@ export const summitHighlights: SummitHighlight[] = [
   },
   {
     id: "trade",
-    icon: "Globe",
+    icon: "export",
+    heroImage: "/images/DSC_0235.JPG",
     title: "Trade & Export Development",
     description:
       "Gain practical insight into expanding trade, improving export readiness, and accessing new markets.",
     tagline: "Navigate Africa–China trade pathways with confidence",
     body: [
-      "Bilateral trade between Africa and China has grown significantly over the past two decades, yet the full potential of this relationship remains largely untapped. MEEI 2026 focuses on identifying the practical pathways — logistical, financial, regulatory, and relational — that unlock that potential.",
+      "Bilateral trade between Africa and China has grown significantly over the past two decades, yet the full potential of this relationship remains largely untapped. MEEI 2026 focuses on identifying the practical pathways, logistical, financial, regulatory, and relational, that unlock that potential.",
       "Sessions on trade facilitation, export readiness, customs and compliance, trade finance, and market intelligence are designed to give delegates a clear, actionable picture of how to grow cross-border trade. Participants will meet buyers, distributors, freight forwarders, and trade support organizations from both regions.",
     ],
     keyBenefits: [
@@ -127,13 +130,14 @@ export const summitHighlights: SummitHighlight[] = [
   },
   {
     id: "matchmaking",
-    icon: "Handshake",
+    icon: "b2b",
+    heroImage: "/images/DSC_0802.JPG",
     title: "B2B Matchmaking Sessions",
     description:
       "Participate in focused networking opportunities designed to encourage relevant business connections.",
     tagline: "Structured one-on-one meetings with the right business partners",
     body: [
-      "Random networking rarely produces the results that structured business matchmaking does. The MEEI 2026 B2B Matchmaking Programme pre-schedules targeted meetings between delegates based on declared business objectives, sector, and geographic focus — maximising the value of every hour at the summit.",
+      "Random networking rarely produces the results that structured business matchmaking does. The MEEI 2026 B2B Matchmaking Programme pre-schedules targeted meetings between delegates based on declared business objectives, sector, and geographic focus, maximising the value of every hour at the summit.",
       "Each matchmaking participant completes a business profile before the event, enabling our coordination team to arrange meetings with the most relevant counterparts. Dedicated matchmaking zones and coordinators ensure sessions run smoothly and that follow-up opportunities are captured and supported.",
     ],
     keyBenefits: [
@@ -151,13 +155,14 @@ export const summitHighlights: SummitHighlight[] = [
   },
   {
     id: "dialogue",
-    icon: "MessageSquare",
+    icon: "parliament",
+    heroImage: "/images/CRO00023.jpg",
     title: "Government & Private Sector Dialogue",
     description:
       "Engage in conversations around policy, investment, industry, and sustainable economic cooperation.",
     tagline: "Where policy and commerce converge",
     body: [
-      "Sustainable economic growth between Africa and China depends not only on business deals but on the policy environments that enable them. MEEI 2026 brings government representatives, regulators, multilateral institutions, and senior business leaders into the same room — creating a rare and productive dialogue.",
+      "Sustainable economic growth between Africa and China depends not only on business deals but on the policy environments that enable them. MEEI 2026 brings government representatives, regulators, multilateral institutions, and senior business leaders into the same room, creating a rare and productive dialogue.",
       "Roundtables and panel sessions explore investment facilitation, trade policy, industrial cooperation frameworks, and the future of bilateral agreements. These conversations are designed to produce tangible outcomes: shared declarations, new frameworks, and the relationships that make future cooperation possible.",
     ],
     keyBenefits: [
@@ -175,7 +180,8 @@ export const summitHighlights: SummitHighlight[] = [
   },
   {
     id: "factory",
-    icon: "Building2",
+    icon: "factory",
+    heroImage: "/images/DSC_1005.JPG",
     title: "Factory Visits & Business Tours",
     description:
       "Discover selected business and industrial environments through organized professional visits.",
@@ -199,14 +205,15 @@ export const summitHighlights: SummitHighlight[] = [
   },
   {
     id: "market-access",
-    icon: "MapPin",
+    icon: "map",
+    heroImage: "/images/DSC_0235.JPG",
     title: "Africa–China Market Access Strategies",
     description:
       "Learn about practical approaches to entering, navigating, and developing Africa–China markets.",
     tagline: "Practical frameworks for entering and navigating new markets",
     body: [
-      "Entering a new market — whether in Africa or in China — requires more than ambition. It requires market intelligence, regulatory knowledge, distribution networks, and trusted local relationships. MEEI 2026 addresses all of these through dedicated market access sessions led by practitioners with real on-the-ground experience.",
-      "Content covers consumer trends, distribution infrastructure, regulatory pathways, digital commerce, and go-to-market strategy — both for African businesses entering China and for Chinese businesses expanding across the continent. Delegates gain frameworks, contacts, and clarity.",
+      "Entering a new market, whether in Africa or in China, requires more than ambition. It requires market intelligence, regulatory knowledge, distribution networks, and trusted local relationships. MEEI 2026 addresses all of these through dedicated market access sessions led by practitioners with real on-the-ground experience.",
+      "Content covers consumer trends, distribution infrastructure, regulatory pathways, digital commerce, and go-to-market strategy, both for African businesses entering China and for Chinese businesses expanding across the continent. Delegates gain frameworks, contacts, and clarity.",
     ],
     keyBenefits: [
       "Understand market entry strategies, distribution networks, and regulatory pathways",
@@ -259,20 +266,20 @@ export const whyAttendItems: WhyAttendItem[] = [
 export const speakerPlaceholders: Speaker[] = [
   {
     id: "speaker-1",
-    name: null,
+    name: "Dr Daniel",
     role: null,
     organization: null,
     country: null,
-    image: null,
+    image: "/images/Daniel.jpeg",
     featured: true,
   },
   {
     id: "speaker-2",
-    name: null,
+    name: "Farel Honvoh",
     role: null,
     organization: null,
     country: null,
-    image: null,
+    image: "/images/Farel%20Honvoh.png",
     featured: true,
   },
   {
@@ -511,7 +518,7 @@ export const agendaDays: AgendaDay[] = [
       { time: "09:00", title: "Plenary: Trade Landscape", description: "Overview of Africa–China trade flows and emerging sectors." },
       { time: "11:00", title: "Investment Showcase", description: "Country and sector-level investment opportunity presentations." },
       { time: "14:00", title: "Breakout Sessions", description: "Sector-specific deep dives: manufacturing, agri, energy, logistics." },
-      { time: "17:00", title: "B2B Matchmaking — Session 1", description: "Structured one-on-one business meetings." },
+      { time: "17:00", title: "B2B Matchmaking, Session 1", description: "Structured one-on-one business meetings." },
     ],
   },
   {
@@ -522,7 +529,7 @@ export const agendaDays: AgendaDay[] = [
     sessions: [
       { time: "09:00", title: "Factory & Industrial Visits", description: "Organized visits to selected Guangzhou industrial facilities." },
       { time: "14:00", title: "Manufacturing Partnerships Forum", description: "Panel and Q&A on production and supply-chain collaboration." },
-      { time: "16:00", title: "B2B Matchmaking — Session 2", description: "Continued structured one-on-one meetings." },
+      { time: "16:00", title: "B2B Matchmaking, Session 2", description: "Continued structured one-on-one meetings." },
       { time: "19:00", title: "Cultural Exchange Evening", description: "Informal networking and cultural programme." },
     ],
   },

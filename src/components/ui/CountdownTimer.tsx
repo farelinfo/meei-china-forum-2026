@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const TARGET = new Date("2026-10-17T09:00:00+08:00"); // Opening — Guangzhou time
+const TARGET = new Date("2026-10-17T09:00:00+08:00"); // Opening, Guangzhou time
 
 function getTimeLeft() {
   const diff = TARGET.getTime() - Date.now();
