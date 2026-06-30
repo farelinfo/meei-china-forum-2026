@@ -25,7 +25,7 @@ export default function SecondaryButton({
   ariaLabel,
 }: SecondaryButtonProps) {
   const baseClasses =
-    "inline-flex items-center justify-center gap-2 rounded-sm border border-[var(--border)] px-6 py-3 font-heading text-sm font-semibold uppercase tracking-widest text-[var(--text-primary)] transition-all duration-200 hover:border-[var(--green-bright)] hover:text-[var(--green-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)] disabled:opacity-50 disabled:cursor-not-allowed active:scale-95";
+    "inline-flex items-center justify-center gap-2 rounded-full border border-[var(--border)] px-7 py-3.5 font-body text-sm font-semibold text-[var(--text-primary)] transition-all duration-200 hover:border-[var(--green-bright)] hover:text-[var(--green-bright)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--green-bright)] disabled:opacity-50 disabled:cursor-not-allowed active:scale-95";
 
   const allClasses = `${baseClasses} ${className}`;
 

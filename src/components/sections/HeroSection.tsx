@@ -4,7 +4,7 @@ import { Fragment } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Users, Lightbulb, Handshake, PenLine } from "lucide-react";
+import { Users, Lightbulb, Handshake, ArrowRight } from "lucide-react";
 import CountdownTimer from "@/components/ui/CountdownTimer";
 
 const BENEFITS = [
@@ -28,13 +28,13 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative min-h-screen w-full overflow-hidden bg-[#041A0F]"
-      aria-label="MEEI China Business Forum 2025, hero"
+      aria-label="MEEI China Business Forum 2026, hero"
     >
       {/* ── Full-bleed background: Dr Daniel ── */}
       <div className="absolute inset-0">
         <Image
           src="/images/Dr%20Daniel.png"
-          alt="Dr Daniel, Keynote Speaker, MEEI China Business Forum 2025"
+          alt="Dr Daniel, Keynote Speaker, MEEI China Business Forum 2026"
           fill
           className="object-cover"
           style={{ objectPosition: "35% center" }}
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 className="font-body text-[10px] font-semibold uppercase tracking-[0.3em]"
                 style={{ color: "#D2A74F" }}
               >
-                MEEI China Business Forum 2025
+                MEEI China Business Forum 2026
               </span>
             </motion.div>
 
@@ -184,8 +184,8 @@ export default function HeroSection() {
                   boxShadow: "0 8px 32px rgba(7,132,66,0.40)",
                 }}
               >
-                <PenLine className="h-4 w-4" aria-hidden="true" />
                 Join the Summit
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </Link>
               <p
                 className="font-body text-xs sm:ml-1"

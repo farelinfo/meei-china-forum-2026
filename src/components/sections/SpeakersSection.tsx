@@ -68,9 +68,11 @@ export default function SpeakersSection() {
                 <p className="font-body text-sm font-semibold uppercase tracking-wide text-[var(--text-primary)]">
                   {speaker.name ?? "Speaker to be announced"}
                 </p>
-                <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                  {speaker.role ?? (speaker.organization ?? "Official profile coming soon")}
-                </p>
+                {(speaker.role ?? speaker.organization ?? (!speaker.image ? "Official profile coming soon" : null)) && (
+                  <p className="mt-1 text-xs text-[var(--text-secondary)]">
+                    {speaker.role ?? speaker.organization ?? "Official profile coming soon"}
+                  </p>
+                )}
               </div>
             </article>
           ))}
