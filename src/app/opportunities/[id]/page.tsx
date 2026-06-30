@@ -254,7 +254,7 @@ export default async function OpportunityDetailPage({ params }: Props) {
                       className="flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-sm font-semibold text-white transition-all hover:opacity-90 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-400"
                       style={{ background: "linear-gradient(135deg, #078442 0%, #00A85A 100%)" }}
                     >
-                      Register Now
+                      Claim Your Place
                       <ArrowRight className="h-4 w-4" aria-hidden="true" />
                     </Link>
                   </div>

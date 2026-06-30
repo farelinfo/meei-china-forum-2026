@@ -33,7 +33,7 @@ export default function WhyAttendSection() {
 
       <div className="mt-8">
         <PrimaryButton href="/register" className="w-full sm:w-auto">
-          Register Now
+          Apply to Attend
         </PrimaryButton>
       </div>
     </section>

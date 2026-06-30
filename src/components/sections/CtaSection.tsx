@@ -47,7 +47,7 @@ export default function CtaSection() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <PrimaryButton href="/register" className="min-w-[200px]">
-            Register for MEEI 2026
+            Claim Your Place
           </PrimaryButton>
           <SecondaryButton href="/#contact">
             Contact the Organizers

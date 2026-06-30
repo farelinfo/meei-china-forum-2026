@@ -133,7 +133,7 @@ export default function HighlightsSection() {
             className="inline-flex items-center justify-center gap-2 rounded-full border px-8 py-3.5 text-sm font-semibold transition-all duration-200 hover:bg-white/60 active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#075E52]"
             style={{ borderColor: "#075E52", color: "#075E52" }}
           >
-            Register for the Summit
+            Attend the Summit
           </Link>
         </div>
       </div>

@@ -185,7 +185,7 @@ export default function HeroSection() {
                 }}
               >
                 <PenLine className="h-4 w-4" aria-hidden="true" />
-                Register Now
+                Join the Summit
               </Link>
               <p
                 className="font-body text-xs sm:ml-1"

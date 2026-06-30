@@ -36,7 +36,7 @@ export default function OpportunitiesSpotlightSection() {
       <div className="mx-auto max-w-8xl">
         {/* ── Light green card ── */}
         <div
-          className="relative overflow-hidden rounded-[28px] px-8 py-14 lg:px-12 lg:py-16"
+          className="relative overflow-hidden rounded-[28px] px-5 py-10 sm:px-8 sm:py-14 lg:px-12 lg:py-16"
           style={{
             background: "#E8F4EC",
             boxShadow: "0 24px 80px rgba(0,0,0,0.22), 0 4px 24px rgba(0,0,0,0.10)",
@@ -53,7 +53,7 @@ export default function OpportunitiesSpotlightSection() {
 
           <div className="relative z-10">
             {/* ── Header ── */}
-            <div className="mb-12 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div className="mb-8 flex flex-col gap-5 lg:mb-12 lg:flex-row lg:items-end lg:justify-between">
 
               <div className="max-w-[750px]">
                 {/* Eyebrow */}

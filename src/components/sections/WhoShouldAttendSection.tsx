@@ -34,7 +34,7 @@ export default function WhoShouldAttendSection() {
   return (
     <section
       id="who-attends"
-      className="relative overflow-hidden py-24 lg:py-32"
+      className="relative overflow-hidden py-14 lg:py-32"
       style={{ background: "#FBFAF6" }}
       aria-labelledby="who-attends-heading"
     >
@@ -84,7 +84,7 @@ export default function WhoShouldAttendSection() {
       <div className="relative z-10 mx-auto max-w-[1560px] px-6 lg:px-16 xl:px-20">
 
         {/* Heading block */}
-        <div className="mb-16 flex flex-col items-center text-center">
+        <div className="mb-8 flex flex-col items-center text-center lg:mb-16">
           <p
             className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.22em]"
             style={{ color: DEEP_GREEN }}
@@ -119,12 +119,12 @@ export default function WhoShouldAttendSection() {
         </div>
 
         {/* Cards grid */}
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 xl:grid-cols-5">
           {attendeeTypes.map((type) => {
             return (
               <article
                 key={type.id}
-                className="group flex flex-col items-center px-6 pb-7 pt-8 text-center"
+                className="group flex flex-col items-center px-3 pb-5 pt-5 text-center sm:px-6 sm:pb-7 sm:pt-8"
                 style={{
                   background: "rgba(255,255,255,0.95)",
                   border: `1px solid ${CARD_BORDER}`,
@@ -147,24 +147,24 @@ export default function WhoShouldAttendSection() {
               >
                 {/* Icons8 Fluency icon in pale-green circle */}
                 <div
-                  className="mb-5 flex items-center justify-center rounded-full"
-                  style={{ width: "80px", height: "80px", background: ICON_BG }}
+                  className="mb-3 flex items-center justify-center rounded-full sm:mb-5"
+                  style={{ width: "64px", height: "64px", background: ICON_BG }}
                   aria-hidden="true"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={icons8Url(ICONS8[type.id] ?? "briefcase", 96)}
                     alt=""
-                    width={44}
-                    height={44}
-                    className="h-11 w-11 object-contain"
+                    width={36}
+                    height={36}
+                    className="h-9 w-9 object-contain"
                     style={{ filter: TO_DEEP_GREEN }}
                   />
                 </div>
 
                 {/* Title */}
                 <h3
-                  className="mb-3 font-body text-[11.5px] font-bold uppercase tracking-[0.13em]"
+                  className="mb-2 font-body text-[10px] font-bold uppercase tracking-[0.1em] sm:text-[11.5px] sm:tracking-[0.13em]"
                   style={{ color: "#0B1B24" }}
                 >
                   {type.title}
@@ -172,7 +172,7 @@ export default function WhoShouldAttendSection() {
 
                 {/* Description */}
                 <p
-                  className="flex-1 font-body text-[13.5px] leading-[1.65]"
+                  className="flex-1 font-body text-[12px] leading-[1.6] sm:text-[13.5px] sm:leading-[1.65]"
                   style={{ color: "#59616C" }}
                 >
                   {type.description}
@@ -180,8 +180,8 @@ export default function WhoShouldAttendSection() {
 
                 {/* Bottom accent line */}
                 <div
-                  className="mt-6 rounded-full"
-                  style={{ width: "44px", height: "2px", background: DEEP_GREEN }}
+                  className="mt-3 rounded-full sm:mt-6"
+                  style={{ width: "32px", height: "2px", background: DEEP_GREEN }}
                   aria-hidden="true"
                 />
               </article>
@@ -190,13 +190,13 @@ export default function WhoShouldAttendSection() {
         </div>
 
         {/* ── Subtle CTA ── */}
-        <div className="mt-14 flex justify-center">
+        <div className="mt-10 flex justify-center lg:mt-14">
           <Link
             href="/register"
             className="group inline-flex items-center gap-2 rounded-full border px-7 py-3 font-body text-sm font-semibold transition-all duration-200 hover:bg-[#064E3B] hover:text-white active:scale-95 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#064E3B]"
             style={{ borderColor: "rgba(6,78,59,0.3)", color: DEEP_GREEN }}
           >
-            Secure Your Delegate Place
+            Book Your Place
             <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </Link>
         </div>

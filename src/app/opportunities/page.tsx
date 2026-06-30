@@ -37,7 +37,7 @@ const CREAM = "#EFE9DF";
 const DARK  = "#0D1E11";
 
 const PAD_X     = "clamp(24px, 5.5vw, 80px)";
-const PAD_Y     = "clamp(60px, 7vw, 100px)";
+const PAD_Y     = "clamp(40px, 7vw, 100px)";
 
 export default function OpportunitiesPage() {
   return (
@@ -133,7 +133,7 @@ export default function OpportunitiesPage() {
                 className="group inline-flex shrink-0 items-center gap-2 rounded-xl font-body text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-95"
                 style={{ background: "#2ca640", padding: "14px 32px" }}
               >
-                Register Now
+                Book Your Place
                 <ArrowRight
                   className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
                   aria-hidden="true"
@@ -212,7 +212,7 @@ function Intro({ sticky }: { sticky: boolean }) {
         className="group mb-3 flex w-full items-center justify-center gap-2 rounded-xl font-body text-sm font-semibold text-white transition-all duration-200 hover:opacity-90 active:scale-95"
         style={{ background: "#2ca640", padding: "13px 24px" }}
       >
-        Secure Your Place
+        Apply to Attend
         <ArrowRight
           className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
           aria-hidden="true"
@@ -266,7 +266,7 @@ function OpportunityList() {
           <li key={id} className="group border-b" style={{ borderColor: "rgba(10,30,15,0.16)" }}>
             <Link
               href={`/opportunities/${id}`}
-              className="flex items-start gap-5 py-10 outline-none transition-colors duration-200 hover:bg-[#D8EDDB] lg:gap-8 lg:py-12 focus-visible:bg-[#D8EDDB]"
+              className="flex items-start gap-4 py-6 outline-none transition-colors duration-200 hover:bg-[#D8EDDB] lg:gap-8 lg:py-12 focus-visible:bg-[#D8EDDB]"
               style={{ borderRadius: "2px" }}
             >
               {/* Index number */}

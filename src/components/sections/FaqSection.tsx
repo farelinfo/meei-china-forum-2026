@@ -42,7 +42,7 @@ export default function FaqSection() {
                 href="/register"
                 className="group inline-flex w-fit items-center gap-2 rounded-full bg-[#2ca640] px-6 py-2.5 font-body text-sm font-semibold text-white transition-all duration-200 hover:bg-[#078442] active:scale-95"
               >
-                Register Now
+                Secure Your Spot
                 <svg className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
               </Link>
               <Link

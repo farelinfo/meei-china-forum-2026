@@ -280,7 +280,7 @@ export default function ProgrammeSection() {
                 background: "linear-gradient(135deg, #078442 0%, #00A85A 100%)",
               }}
             >
-              Register Now
+              Reserve Your Place
             </Link>
 
             {/* Divider */}
